@@ -16,31 +16,38 @@
 /** HEADER **/
 #header {
   border-bottom: 4px solid #5e6c70;
-  padding: 15px;
   margin-bottom: 15px;
+}
+#header .wrapper {
+  width: 85%;
+  padding: 15px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#header #logo img {
+#header .wrapper #logo img {
   margin: 10px;
   width: 60px;
 }
-#header #page-name {
+#header .wrapper #page-name {
   margin: 10px;
 }
 /** MAIN **/
 main #jumbotron {
   background: #02b3e4 url(../../img/resp/poly_back10-1600_lg.jpg) no-repeat;
-  height: 500px;
   background-size: cover;
+  height: calc(100vh - 118px);
   width: 100vw;
 }
 main h2 {
   margin: 15px;
 }
-main .content {
-  width: 100vw;
+main .wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+main .wrapper .content {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -54,13 +61,29 @@ main .content {
   -ms-flex-direction: row;
   flex-direction: row;
 }
-main .content .content-block {
+main .wrapper .content .content-block {
   width: 33%;
   padding: 15px;
+  margin: 0 10px 15px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  transform: scale(1);
 }
-main .content .content-block img {
+main .wrapper .content .content-block:hover {
+  -webkit-box-shadow: 0px 0px 5px 1px #b9b9b9;
+  -moz-box-shadow: 0px 0px 5px 1px #b9b9b9;
+  box-shadow: 0px 0px 5px 1px #b9b9b9;
+  transform: scale(1.01);
+}
+main .wrapper .content .content-block img {
   max-width: 100%;
   height: auto;
+}
+main .wrapper .content .content-block h3 {
+  margin: 5px 0;
 }
 /** mobile **/
 @media (max-width: 767px) {
@@ -79,17 +102,21 @@ main .content .content-block img {
   main #jumbotron {
     max-height: 50vh;
   }
-  main .content {
+  main .wrapper {
+    width: 100vw;
+  }
+  main .wrapper .content {
     -webkit-box-orient: vertical;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  main .content .content-block {
+  main .wrapper .content .content-block {
     width: 100%;
-    padding: 20px 6%;
+    padding: 20px 15px;
+    margin: 0;
   }
-  main .content .content-block img {
+  main .wrapper .content .content-block img {
     max-width: 100%;
   }
 }

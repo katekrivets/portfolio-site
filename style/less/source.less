@@ -17,49 +17,71 @@
 /** HEADER **/
 #header {
   border-bottom: 4px solid @lightgray;
-  padding: 15px;
   margin-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  #logo {
-    img {
+  .wrapper {
+    width: 85%;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    #logo {
+      img {
+        margin: 10px;
+        width: 60px;
+      }
+    }
+    #page-name {
       margin: 10px;
-      width: 60px;
     }
   }
-  #page-name {
-    margin: 10px;
-  }
 }
-
 /** MAIN **/
 main {
   #jumbotron {
     background: @udacity-lightblue url(../../img/resp/poly_back10-1600_lg.jpg) no-repeat;
-    height: 500px;
     background-size: cover;
+    height: calc(100vh - 118px);
     width: 100vw;
   }
   h2 {
     margin: 15px;
   }
-  .content {
-    width: 100vw;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;    
-    -webkit-flex-direction: row; 
-    -ms-flex-direction: row; 
-    flex-direction: row;
-    .content-block {
-      width: 33%;
-      padding: 15px;
-      img {
-        max-width: 100%;
-        height: auto;
+  .wrapper {
+    width: 85%;
+    margin: 0 auto;
+    .content {
+      display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;      /* TWEENER - IE 10 */
+      display: -webkit-flex;     /* NEW - Chrome */
+      display: flex;    
+      -webkit-flex-direction: row; 
+      -ms-flex-direction: row; 
+      flex-direction: row;
+      .content-block {
+        width: 33%;
+        padding: 15px;
+        margin: 0 10px 15px;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        transform: scale(1);
+        &:hover {
+          -webkit-box-shadow: 0px 0px 5px 1px #b9b9b9;
+          -moz-box-shadow: 0px 0px 5px 1px #b9b9b9;
+          box-shadow: 0px 0px 5px 1px #b9b9b9;
+          transform: scale(1.01);
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+        h3 {
+          margin: 5px 0;
+        }
       }
     }
   }
@@ -84,16 +106,20 @@ main {
     #jumbotron {
       max-height: 50vh;
     }
-    .content {
-      -webkit-box-orient: vertical;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      .content-block {
-        width: 100%;
-        padding: 20px 6%;
-        img {
-          max-width: 100%;
+    .wrapper {
+      width: 100vw;
+      .content {
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        .content-block {
+          width: 100%;
+          padding: 20px 15px;
+          margin: 0;
+          img {
+            max-width: 100%;
+          }
         }
       } 
     }
