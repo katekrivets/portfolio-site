@@ -1,127 +1,151 @@
 /** FONTS **/
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /** MAIN COLORS **/
-@udacity-lightblue: #02b3e4;
-@udacity-darkblue: #2d3c49;
-@udacity-gray: #7d97ad;
-@lightgray:#5e6c70;
+
+@udacity - lightblue: #02b3e4;
+@udacity-darkblue: # 2 d3c49;
+@udacity - gray: #7d97ad;
+@lightgray: # 5e6 c70;
 
 /** BODY **/
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  box - sizing: border - box;
+  font - family: 'Roboto', sans - serif;
 }
+
+a {
+  text - decoration: none;
+  cursor: pointer;
+  color: black;
+  &: hover,
+  &: focus {
+    text - decoration: none;
+    color: @udacity - darkblue;
+  }
+}
+
 /** HEADER **/
-#header {
-  border-bottom: 4px solid @lightgray;
-  margin-bottom: 15px;
+
+# header {
+  border - bottom: 4 px solid @lightgray;
+  margin - bottom: 15 px;
   .wrapper {
-    width: 85%;
-    padding: 15px;
+    width: 85 %;
+    padding: 15 px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex - direction: row;
+    justify - content: space - between;
     #logo {
       img {
-        margin: 10px;
-        width: 60px;
+        margin: 10 px;
+        width: 60 px;
       }
     }
-    #page-name {
-      margin: 10px;
+    # page - name {
+      margin: 10 px;
     }
   }
 }
+
 /** MAIN **/
+
 main {
-  #jumbotron {
-    background: @udacity-lightblue url(../../img/resp/poly_back10-1600_lg.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 118px);
-    width: 100vw;
+  # jumbotron {
+    background: @udacity - lightblue url(.. / .. / img / resp / poly_back10 - 1600 _lg.jpg) no - repeat;
+    background - size: cover;
+    height: calc(100 vh - 118 px);
+    width: 100 vw;
   }
   h2 {
-    margin: 15px;
+    margin: 15 px;
   }
   .wrapper {
-    width: 85%;
+    width: 85 %;
     margin: 0 auto;
     .content {
-      display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-      display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: -webkit-flex;     /* NEW - Chrome */
-      display: flex;    
-      -webkit-flex-direction: row; 
-      -ms-flex-direction: row; 
-      flex-direction: row;
-      .content-block {
-        width: 33%;
-        padding: 15px;
-        margin: 0 10px 15px;
-        -webkit-transition: all 0.5s ease-in-out;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
+      display: -webkit - box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz - box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms - flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit - flex;
+      /* NEW - Chrome */
+      display: flex;
+      - webkit - flex - direction: row;
+      - ms - flex - direction: row;
+      flex - direction: row;
+      .content - block {
+        width: 33 %;
+        padding: 15 px;
+        margin: 0 10 px 15 px;
+        - webkit - transition: all 0.5 s ease - in -out;
+        - moz - transition: all 0.5 s ease - in -out;
+        - o - transition: all 0.5 s ease - in -out;
+        transition: all 0.5 s ease - in -out;
         position: relative;
         transform: scale(1);
-        &:hover {
-          -webkit-box-shadow: 0px 0px 5px 1px #b9b9b9;
-          -moz-box-shadow: 0px 0px 5px 1px #b9b9b9;
-          box-shadow: 0px 0px 5px 1px #b9b9b9;
+        &: hover {
+          -webkit - box - shadow: 0 px 0 px 5 px 1 px# b9b9b9;
+          - moz - box - shadow: 0 px 0 px 5 px 1 px# b9b9b9;
+          box - shadow: 0 px 0 px 5 px 1 px# b9b9b9;
           transform: scale(1.01);
         }
         img {
-          max-width: 100%;
+          max - width: 100 %;
           height: auto;
         }
         h3 {
-          margin: 5px 0;
+          margin: 5 px 0;
         }
       }
     }
   }
 }
-/** mobile **/
-@media (max-width: 767px)  {
-  #header {
-    padding: 10px;
-    margin-bottom: 15px;
+
+/** MOBILE **/
+
+@media(max - width: 767 px) {
+  # header {
+    padding: 10 px;
+    margin - bottom: 15 px;
     #logo {
       img {
-        width: 40px;
-        margin: 5px;
+        width: 40 px;
+        margin: 5 px;
       }
     }
-    #page-name {
-      font-size: 0.8em;
-      margin: 5px;
+    # page - name {
+      font - size: 0.8e m;
+      margin: 5 px;
     }
   }
   main {
-    #jumbotron {
-      max-height: 50vh;
+    # jumbotron {
+      max - height: 50 vh;
     }
     .wrapper {
-      width: 100vw;
+      width: 100 vw;
       .content {
-        -webkit-box-orient: vertical;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        .content-block {
-          width: 100%;
-          padding: 20px 15px;
+        -webkit - box - orient: vertical;
+        - webkit - flex - direction: column;
+        - ms - flex - direction: column;
+        flex - direction: column;
+        .content - block {
+          width: 100 %;
+          padding: 20 px 15 px;
           margin: 0;
           img {
-            max-width: 100%;
+            max - width: 100 %;
           }
         }
-      } 
+      }
     }
   }
 }

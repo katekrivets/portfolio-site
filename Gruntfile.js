@@ -1,22 +1,23 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     responsive_images: {
       dev: {
         options: {
           engine: 'im',
           sizes: [{
-            width: 1600,
-            suffix: '_lg',
-            quality: 80
-          },
-          {
-            width: 700,
-            height: 380,
-            aspectRatio: false,
-            gravity: "NorthWest",
-            suffix: '_s',
-            quality: 60
-          }]
+              width: 1600,
+              suffix: '_lg',
+              quality: 80
+            },
+            {
+              width: 700,
+              height: 380,
+              aspectRatio: false,
+              gravity: "NorthWest",
+              suffix: '_s',
+              quality: 60
+            }
+          ]
         },
         files: [{
           expand: true,
