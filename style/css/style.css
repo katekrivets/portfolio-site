@@ -95,6 +95,9 @@ main .wrapper .content .content-block img {
 }
 main .wrapper .content .content-block h3 {
   margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /** mobile **/
 @media (max-width: 767px) {
