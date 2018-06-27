@@ -13,7 +13,8 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-a {
+/** GLOBAL STYLING FOR "a" **/
+a { 
   text-decoration: none;
   cursor: pointer;
   color: black;
@@ -48,7 +49,7 @@ main #jumbotron {
   background: #02b3e4 url(../../img/resp/poly_back10-1600_lg.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh - 118px);
-  width: 100vw;
+  width: 100%;
 }
 main h2 {
   margin: 15px;
